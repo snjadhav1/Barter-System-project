@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barter System Dashboard</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('gr.webp'); /* Background Image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Header */
+    header {
+      background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+      color: #ab7888;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      opacity: 0.5;
+    }
+
+    /* Logo */
+    header img {
+      max-height: 50px;
+      vertical-align: middle;
+      filter: brightness(0.5); /* Darken the logo */
+    }
+
+    /* Barter System Dashboard name */
+    header h1 {
+      color: rgba(255, 255, 255, 0.9); /* Light color for visibility */
+      margin-top: 5px; /* Adjusting the margin */
+    }
+
+    /* Navigation */
+    nav {
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff9a9e;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: #ff9a9e;
+    }
+
+    nav a:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Main Content */
+    main {
+      padding: 20px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    section:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    section h2 {
+      color: #ff9a9e;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+      color: #ffffff;
+      padding: 10px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Barter System Logo">
+    <h1>Barter System Dashboard</h1>
+  </header>
+
+  <nav>
+    <a href="profile.php">Profile</a>
+    <a href="my_trades.php">My Trades</a>
+    <a href="../users.php">Messages</a>
+    <a href="search_product.php">Search Products</a>
+    <a href="setting.html">Settings</a>
+  </nav>
+
+  <main>
+    <section> <!-- Animated section -->
+      <h2>Welcome Back!</h2>
+      <a href="recent.php">Here's a quick overview of your recent activity:</a>
+      <!-- Add content for recent activity -->
+    </section>
+
+    <section> <!-- Animated section -->
+      <h2>Trending Items</h2>
+      <a href="trending.php">Check out these popular items up for trade:</a>
+      <!-- Add content for trending items -->
+    </section>
+
+    <section> <!-- Animated section -->
+      <h2>Notifications</h2>
+      <a href="notification.php">Stay on top of the latest updates:</a>
+      <!-- Add content for notifications -->
+    </section>
+  </main>
+
+  <footer><!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/65fbc2f4a0c6737bd12320b4/1hpfn33j8';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script--></footer>
+
+  <footer>
+    &copy; Barter System
+  </footer>
+</body>
+</html>

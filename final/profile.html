@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barter System - Profile</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('gr.webp'); /* Background Image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      animation: pulse 5s infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Logo */
+    header img {
+      max-height: 50px;
+      vertical-align: middle;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff9a9e;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color:#ff9a9e ;
+    }
+
+    nav a:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Main Content */
+    main {
+      padding: 20px;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      0% {transform: translateX(-100%);}
+      100% {transform: translateX(0);}
+    }
+
+    /* Profile Section */
+    #profile-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    #profile-section:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    #profile-section h2 {
+      color: #ff9a9e;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #profile-section .profile-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    #profile-section .profile-info div {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    #profile-section .profile-info div:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #profile-section .profile-info div h3 {
+      color: #ff9a9e;
+      margin-top: 0;
+    }
+
+    #profile-section .profile-info div p {
+      margin-bottom: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Barter System Logo">
+    <h1>Barter System - Profile</h1>
+  </header>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="my_trades.php">My Trades</a>
+    <a href="../users.php">Messages</a>
+    <a href="setting.html">Settings</a>
+    <a href="../logout.php">Logout</a>
+    <a href="search_product.php">Search products</a>
+  </nav>
+
+  <main>
+    <section id="profile-section">
+      <h2>My Profile</h2>
+      <div class="profile-info">
+        <div>
+          <h3>Personal Information</h3>
+          <p><strong>Full Name:</strong> <?php echo $fullname; ?></p>
+          <p><strong>Email:</strong> <?php echo $email; ?></p>
+          <p><strong>Location:</strong> <?php echo $location; ?></p>
+          <p><strong>User Type:</strong> <?php echo $user_type; ?></p>
+          <p><strong>Gender:</strong> <?php echo $gender; ?></p>
+        </div>
+        <div>
+          <h3>Trade History</h3>
+          <p><strong>Total Trades:</strong> <?php echo $total_trades; ?></p>
+          <p><strong>Successful Trades:</strong> <?php echo $successful_trades; ?></p>
+          <p><strong>Rating:</strong> <?php echo $rating; ?>/5</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/65fbc2f4a0c6737bd12320b4/1hpfn33j8';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script--></footer>
+
+  <footer>
+    &copy; Barter System
+  </footer>
+</body>
+</html>
